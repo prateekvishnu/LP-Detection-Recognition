@@ -40,9 +40,11 @@ In our experiments, models using **NdLinear converged faster and achieved better
 - Stops training when validation IoU plateaus.
 - Saves best model based on IoU and logs results to CSV.
 
-### 🧹 5. Character Segmentation with OpenCV
-- Rule-based system for segmenting license plate characters.
-- Works across different countries and fonts.
+### 🧹 5. Character Segmentation with OpenCV and Classification with Neural Networks
+- Uses a rule-based OpenCV pipeline for extracting individual characters from license plates via contour detection and filtering.
+- Segmented characters are passed to a custom CNN classifier (with Linear or NdLinear head) for alphanumeric recognition.
+- Designed to handle variations in plate layout, fonts, and spacing across different countries.
+
 
 ---
 
